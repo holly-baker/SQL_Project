@@ -1,0 +1,16 @@
+Students:
+CREATE TABLE `SQL_Project_Schema_V2`.`students_table` (
+  `students_id` INT NOT NULL AUTO_INCREMENT,
+  `students_name` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`students_id`),
+  UNIQUE INDEX `students_id_UNIQUE` (`students_id` ASC) VISIBLE);
+INSERT INTO students_table(students_name)
+VALUE("Holly Baker");
+INSERT INTO students_table(students_name)
+VALUE("John Smith");
+INSERT INTO students_table(students_name)
+VALUE("Melinda Green");
+INSERT INTO students_table(students_name)
+VALUE("Max Stepp");
+INSERT INTO students_table(students_name)
+VALUE("Amanda Moore");
