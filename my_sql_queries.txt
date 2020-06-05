@@ -14,3 +14,21 @@ INSERT INTO students_table(students_name)
 VALUE("Max Stepp");
 INSERT INTO students_table(students_name)
 VALUE("Amanda Moore");
+
+Professors:
+CREATE TABLE `SQL_Project_Schema_V2`.`professors_table` (
+  `professors_id` INT NOT NULL AUTO_INCREMENT,
+  `professors_name` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`professors_id`),
+  UNIQUE INDEX `professors_id_UNIQUE` (`professors_id` ASC) VISIBLE);
+
+INSERT INTO professors_table(professors_name)
+VALUE("Michael Geyer");
+INSERT INTO professors_table(professors_name)
+VALUE("Kelley Cooper");
+INSERT INTO professors_table(professors_name)
+VALUE("Pete Tanaka");
+INSERT INTO professors_table(professors_name)
+VALUE("Andrew Tobin");
+INSERT INTO professors_table(professors_name)
+VALUE("Ben Fenton");
