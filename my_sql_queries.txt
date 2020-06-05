@@ -32,3 +32,33 @@ INSERT INTO professors_table(professors_name)
 VALUE("Andrew Tobin");
 INSERT INTO professors_table(professors_name)
 VALUE("Ben Fenton");
+
+Courses:
+CREATE TABLE `SQL_Project_Schema_V2`.`courses_table` (
+  `courses_id` INT NOT NULL AUTO_INCREMENT,
+  `courses_name` VARCHAR(45) NOT NULL,
+  `courses_professors_id` INT NOT NULL,
+  PRIMARY KEY (`courses_id`),
+  UNIQUE INDEX `courses_id_UNIQUE` (`courses_id` ASC) VISIBLE);
+
+ALTER TABLE `SQL_Project_Schema_V2`.`courses_table` 
+ADD INDEX `courses_professors_id_idx` (`courses_professors_id` ASC) VISIBLE;
+;
+ALTER TABLE `SQL_Project_Schema_V2`.`courses_table` 
+ADD CONSTRAINT `courses_professors_id`
+  FOREIGN KEY (`courses_professors_id`)
+  REFERENCES `SQL_Project_Schema_V2`.`professors_table` (`professors_id`)
+  ON DELETE CASCADE
+  ON UPDATE CASCADE;
+
+INSERT INTO courses_table(courses_name, courses_professors_id)
+VALUES('Science', 1);
+INSERT INTO courses_table(courses_name, courses_professors_id)
+VALUES('Astonomy', 2);
+INSERT INTO courses_table(courses_name, courses_professors_id)
+VALUES('Math', 3);
+INSERT INTO courses_table(courses_name, courses_professors_id)
+VALUES('History', 4);
+INSERT INTO courses_table(courses_name, courses_professors_id)
+VALUES('English', 5);
+
