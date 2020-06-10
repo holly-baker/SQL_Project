@@ -12,3 +12,11 @@ FROM grades_table
 JOIN students_table
 ON grades_table.grades_students_id = students_id
 GROUP BY students_name;
+
+SELECT *
+FROM students_table
+JOIN grades_table
+ON grades_table.grades_students_id = students_table.students_id
+JOIN courses_table
+ON grades_table.grades_courses_id = courses_table.courses_id
+ORDER BY courses_table.courses_name DESC;
