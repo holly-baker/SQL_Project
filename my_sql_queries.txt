@@ -5,3 +5,10 @@ ON courses_table.courses_professors_id = professors_id
 JOIN grades_table
 ON courses_table.courses_id =  grades_courses_id
 GROUP BY professors_name;
+
+
+SELECT students_name AS "Student", MAX(grades_value) AS "Top Grade Given"
+FROM grades_table
+JOIN students_table
+ON grades_table.grades_students_id = students_id
+GROUP BY students_name;
