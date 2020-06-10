@@ -137,3 +137,7 @@ VALUES(70, 4, 5);
 INSERT INTO grades_table(grades_value, grades_courses_id, grades_students_id)
 VALUES(60, 5, 5);
  
+
+
+INSERT INTO courses_table(courses_name, courses_professors_id)
+VALUES ('Art', 4);
