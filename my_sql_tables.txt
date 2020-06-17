@@ -143,3 +143,36 @@ INSERT INTO courses_table(courses_name, courses_professors_id)
 VALUES ('Art', 4);
 INSERT INTO grades_table(grades_value, grades_courses_id, grades_students_id)
 VALUES(100, 6, 1);
+
+
+ALTER TABLE `SQL_Project_Schema_V2`.`grades_table` 
+ADD COLUMN `grades_professors_id` INT NOT NULL AFTER `grades_students_id`;
+
+
+UPDATE `sql_project_schema_v2`.`grades_table` SET `grades_professors_id` = '1' WHERE (`grades_id` = '1');
+UPDATE `sql_project_schema_v2`.`grades_table` SET `grades_professors_id` = '2' WHERE (`grades_id` = '2');
+UPDATE `sql_project_schema_v2`.`grades_table` SET `grades_professors_id` = '3' WHERE (`grades_id` = '3');
+UPDATE `sql_project_schema_v2`.`grades_table` SET `grades_professors_id` = '4' WHERE (`grades_id` = '4');
+UPDATE `sql_project_schema_v2`.`grades_table` SET `grades_professors_id` = '5' WHERE (`grades_id` = '5');
+UPDATE `sql_project_schema_v2`.`grades_table` SET `grades_professors_id` = '1' WHERE (`grades_id` = '6');
+UPDATE `sql_project_schema_v2`.`grades_table` SET `grades_professors_id` = '2' WHERE (`grades_id` = '7');
+UPDATE `sql_project_schema_v2`.`grades_table` SET `grades_professors_id` = '3' WHERE (`grades_id` = '8');
+UPDATE `sql_project_schema_v2`.`grades_table` SET `grades_professors_id` = '4' WHERE (`grades_id` = '9');
+UPDATE `sql_project_schema_v2`.`grades_table` SET `grades_professors_id` = '5' WHERE (`grades_id` = '10');
+UPDATE `sql_project_schema_v2`.`grades_table` SET `grades_professors_id` = '1' WHERE (`grades_id` = '11');
+UPDATE `sql_project_schema_v2`.`grades_table` SET `grades_professors_id` = '2' WHERE (`grades_id` = '12');
+UPDATE `sql_project_schema_v2`.`grades_table` SET `grades_professors_id` = '3' WHERE (`grades_id` = '13');
+UPDATE `sql_project_schema_v2`.`grades_table` SET `grades_professors_id` = '4' WHERE (`grades_id` = '14');
+UPDATE `sql_project_schema_v2`.`grades_table` SET `grades_professors_id` = '5' WHERE (`grades_id` = '15');
+UPDATE `sql_project_schema_v2`.`grades_table` SET `grades_professors_id` = '1' WHERE (`grades_id` = '16');
+UPDATE `sql_project_schema_v2`.`grades_table` SET `grades_professors_id` = '2' WHERE (`grades_id` = '17');
+UPDATE `sql_project_schema_v2`.`grades_table` SET `grades_professors_id` = '3' WHERE (`grades_id` = '18');
+UPDATE `sql_project_schema_v2`.`grades_table` SET `grades_professors_id` = '4' WHERE (`grades_id` = '19');
+UPDATE `sql_project_schema_v2`.`grades_table` SET `grades_professors_id` = '5' WHERE (`grades_id` = '20');
+UPDATE `sql_project_schema_v2`.`grades_table` SET `grades_professors_id` = '1' WHERE (`grades_id` = '21');
+UPDATE `sql_project_schema_v2`.`grades_table` SET `grades_professors_id` = '2' WHERE (`grades_id` = '22');
+UPDATE `sql_project_schema_v2`.`grades_table` SET `grades_professors_id` = '3' WHERE (`grades_id` = '23');
+UPDATE `sql_project_schema_v2`.`grades_table` SET `grades_professors_id` = '4' WHERE (`grades_id` = '24');
+UPDATE `sql_project_schema_v2`.`grades_table` SET `grades_professors_id` = '5' WHERE (`grades_id` = '25');
+UPDATE `sql_project_schema_v2`.`grades_table` SET `grades_professors_id` = '4' WHERE (`grades_id` = '26');
+
