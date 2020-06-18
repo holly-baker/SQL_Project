@@ -21,6 +21,13 @@ JOIN courses_table
 ON grades_table.grades_courses_id = courses_table.courses_id
 ORDER BY courses_table.courses_name DESC;
 
+SELECT courses_name AS 'Course', AVG(grades_value) AS 'Average Grade'
+FROM grades_table g 
+JOIN courses_table 
+ON g.grades_courses_id = courses_id
+GROUP BY courses_name
+ORDER BY AVG(grades_value) ASC;
+
 SELECT students_name AS 'Student', professors_name AS 'Professor', COUNT(*) AS 'Courses In Common'
 FROM grades_table
 JOIN students_table
